@@ -1,0 +1,35 @@
+<div id="header">
+    <div class="container-fluid">
+      <div role="navigation" class="navbar navbar-static-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">Mysite2</a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-left">
+                {{# each navLinks}}
+                <li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
+                  <a href="{{ href }}">{{ label }}</a>
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  	<div class="content">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-md-8.col-md-offset-2">
+  					<h1>Welcome</h1>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  <nav>
+</div>
