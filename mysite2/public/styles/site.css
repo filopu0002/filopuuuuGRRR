@@ -5830,16 +5830,22 @@ html {
   width: 100%;
   height: 100%; }
 
-#header {
-  background: url(./../images/header2.jpeg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+#main {
+  height: 100%;
+  margin-top: 50px; }
+
+.content-fixed {
+  min-height: 100%;
   background-size: cover;
   background-attachment: fixed;
-  left: -50%;
-  width: auto;
-  height: 100%; }
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.content-scrolling {
+  min-height: 30%;
+  padding: 4em 0;
+  line-height: 1.6;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); }
 
 #footer {
   margin-top: 30px;
@@ -5851,3 +5857,17 @@ html {
   display: block;
   max-width: 100%;
   height: auto; }
+
+#index {
+  height: 100%;
+  position: relative; }
+  #index .cover {
+    background-image: url(./../images/header2.jpeg); }
+  #index .cover2 {
+    background-image: url(./../images/Header.jpeg); }
+  #index .cd-color-2 {
+    background-color: #99a478;
+    color: #3d3536; }
+  #index .cd-color-3 {
+    background-color: #b4d7a8;
+    color: #3d3536; }

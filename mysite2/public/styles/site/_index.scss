@@ -1,0 +1,22 @@
+#index{
+  height: 100%;
+	position: relative;
+  .cover{
+    background-image: url(./../images/header2.jpeg);
+    // left:-50%;
+    // width:auto;
+    // height:100%;
+  }
+  .cover2{
+    background-image: url(./../images/Header.jpeg);
+  }
+  .cd-color-2{
+    background-color: $color-2;
+		color: $color-1;
+  }
+
+  .cd-color-3 {
+		background-color: $color-3;
+		color: $color-1;
+	}
+}

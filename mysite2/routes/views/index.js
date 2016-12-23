@@ -19,8 +19,6 @@ exports = module.exports = function (req, res) {
 
 		var q = keystone.list('Post').paginate({
 			page: req.query.page || 1,
-			perPage: 10,
-			maxPages: 10,
 			filters: {
 				state: 'published',
 			},
@@ -29,7 +27,6 @@ exports = module.exports = function (req, res) {
 			.populate('author');
 
 		q.exec(function (err, results) {
-			console.log("Blog data --------->", results);
 			locals.data.posts = results;
 			next(err);
 		});
