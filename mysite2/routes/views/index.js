@@ -1,6 +1,6 @@
 var keystone = require('keystone');
 
-exports = module.exports = function (req, res) {
+exports = module.exports = function(req, res) {
 
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
@@ -15,18 +15,18 @@ exports = module.exports = function (req, res) {
 		categories: [],
 	};
 
-	view.on('init', function (next) {
+	view.on('init', function(next) {
 
 		var q = keystone.list('Post').paginate({
-			page: req.query.page || 1,
-			filters: {
-				state: 'published',
-			},
-		})
+				page: req.query.page || 1,
+				filters: {
+					state: 'published',
+				},
+			})
 			.sort('-publishedDate')
 			.populate('author');
 
-		q.exec(function (err, results) {
+		q.exec(function(err, results) {
 			locals.data.posts = results;
 			next(err);
 		});

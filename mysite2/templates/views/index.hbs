@@ -11,28 +11,37 @@
 			</div>
 		</div>
 	</div>
-	<section class="content-scrolling cd-color-2">
 
-		<div class="container-fluid">
+	<section class="content-scrolling content-scrolling-article">
+		<div class="container">
+			<h3>- Nos derniers articles -</h3>
+			{{# each data.posts.results}}
+				<div class="col-sm-4 article">
 
-
-			<div class="post">
-				<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
-				<div class="col-sm-4">
-					{{# each data.posts.results}}
-					<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
-						<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
-						<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
-								{{#if author.name.first}}by {{author.name.first}}{{/if}}
-						</p>
-						{{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}}
-						<p>{{{content.brief}}}</p>
-						{{#if content.extended}}<p class="read-more"><a href="{{postUrl slug}}">Read more...</a></p>{{/if}}
-					</div>
-					{{/each}}		</div>
-				<div class="col-sm-4">
-
+					<!-- <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post"> -->
+						<a href="{{postUrl slug}}">
+							<div class="post-article" style="background-image: url('images/header2-reduced.jpeg')" >
+								<h2>{{{title}}}</h2>
+								<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
+									{{#if author.name.first}}by {{author.name.first}}{{/if}}
+								</p>
+								<!-- {{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}} -->
+								<p>{{{content.brief}}}</p>
+								{{#if content.extended}}
+									<p class="read-more">Read more...</p>
+								{{/if}}
+							</div>
+						</a>
+					<!-- </div> -->
+				</div>
+				{{/each}}
+				<div class="col-sm-12">
+					<a href="/blog" class="btn btn-1"> <svg>
+      </svg>Découvrez le reste de nos articles </a>
+				</div>
+		</div>
 	</section>
+
 	<div class="content-fixed cover2">
 		<div class="content">
 			<div class="container">
@@ -45,20 +54,6 @@
 		</div>
 	</div>
 	<section class="content-scrolling cd-color-3">
-		<div class="col-md-12">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum eget sem vitae fermentum. Nunc pellentesque leo sed purus efficitur fringilla. Integer nisi urna, laoreet non lectus quis, pellentesque porttitor dolor. Cras varius augue ante, vitae posuere lorem viverra vel. Mauris fringilla urna et purus pharetra placerat. In ullamcorper, odio a elementum venenatis, urna ex suscipit nulla, in tincidunt quam sem vitae ipsum. Proin iaculis tellus dui, ut ultrices enim viverra vel. Aliquam porta purus ac ante scelerisque, non tristique mi sagittis. Quisque tincidunt porta arcu. Praesent ligula nibh, finibus ut tincidunt sit amet, aliquet at est. Pellentesque pellentesque dui sed magna rhoncus, nec vulputate justo eleifend. Duis molestie est eget nulla tempor, nec tempus nunc euismod. Aenean at magna at tellus pharetra aliquam sed a metus. Sed porttitor nulla et arcu malesuada pharetra. Aliquam laoreet vitae dui sit amet ullamcorper. Morbi tincidunt massa ac turpis mattis sollicitudin.
-			</div>
-			<div class="col-md-12">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum eget sem vitae fermentum. Nunc pellentesque leo sed purus efficitur fringilla. Integer nisi urna, laoreet non lectus quis, pellentesque porttitor dolor. Cras varius augue ante, vitae posuere lorem viverra vel. Mauris fringilla urna et purus pharetra placerat. In ullamcorper, odio a elementum venenatis, urna ex suscipit nulla, in tincidunt quam sem vitae ipsum. Proin iaculis tellus dui, ut ultrices enim viverra vel. Aliquam porta purus ac ante scelerisque, non tristique mi sagittis. Quisque tincidunt porta arcu. Praesent ligula nibh, finibus ut tincidunt sit amet, aliquet at est. Pellentesque pellentesque dui sed magna rhoncus, nec vulputate justo eleifend. Duis molestie est eget nulla tempor, nec tempus nunc euismod. Aenean at magna at tellus pharetra aliquam sed a metus. Sed porttitor nulla et arcu malesuada pharetra. Aliquam laoreet vitae dui sit amet ullamcorper. Morbi tincidunt massa ac turpis mattis sollicitudin.
-			</div>
 
-
-				<!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum eget sem vitae fermentum. Nunc pellentesque leo sed purus efficitur fringilla. Integer nisi urna, laoreet non lectus quis, pellentesque porttitor dolor. Cras varius augue ante, vitae posuere lorem viverra vel. Mauris fringilla urna et purus pharetra placerat. In ullamcorper, odio a elementum venenatis, urna ex suscipit nulla, in tincidunt quam sem vitae ipsum. Proin iaculis tellus dui, ut ultrices enim viverra vel. Aliquam porta purus ac ante scelerisque, non tristique mi sagittis. Quisque tincidunt porta arcu. Praesent ligula nibh, finibus ut tincidunt sit amet, aliquet at est. Pellentesque pellentesque dui sed magna rhoncus, nec vulputate justo eleifend. Duis molestie est eget nulla tempor, nec tempus nunc euismod. Aenean at magna at tellus pharetra aliquam sed a metus. Sed porttitor nulla et arcu malesuada pharetra. Aliquam laoreet vitae dui sit amet ullamcorper. Morbi tincidunt massa ac turpis mattis sollicitudin. -->
-			</div>
-		</div>
-
-		<div class="container">
-
-		</div>
 	</section>
 </div>
